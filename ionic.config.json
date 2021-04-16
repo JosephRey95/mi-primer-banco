@@ -1,0 +1,8 @@
+{
+  "name": "Mi primer banco",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "6c7da23f"
+}
