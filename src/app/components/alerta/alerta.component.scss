@@ -1,0 +1,42 @@
+.AlertaVacia {
+    position: fixed;
+    margin: auto;
+    padding: 4%;
+    text-align: center;
+    background: #fff;
+    width: 277px;
+    height: auto;
+    top: 35%;
+    left: 50%;
+    color: #2F745C;
+    background: #FFFFFF;
+    border: 10px #2F745C;
+    border-radius: 15px;
+    transform: translate(-50%);
+    z-index: 3;
+}
+
+.btnAlerta {
+    background: #FFFFFF;
+    margin: auto;
+    width: 90%;
+    height: 42px;
+    border: 1px solid rgba(151, 151, 151, 0.2);
+    border-radius: 6px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    color: #2F745C;
+}
+
+.btnAlerta:hover {
+    background: #2F745C;
+    color: #FFFFFF;
+}
+
+.fondo {
+    width: 100%;
+    height: 100%;
+    background: #000000b5;
+    z-index: 25;
+    position: fixed;
+}

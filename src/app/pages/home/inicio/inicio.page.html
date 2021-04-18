@@ -1,0 +1,43 @@
+<app-header></app-header> 
+<ion-content class="body">
+    <app-alerta *ngIf="AlertaPersonalizada " [Titulo]="Titulo" [Mensaje]="Mensaje" [BtnVisible]="BtnInvisible"
+        (Visible)="AlertaPersonalizada = $event">
+    </app-alerta>
+
+
+    <div class="CajaTexto">
+      <p class="txtTitulo">Cuenta corriente</p>
+    </div>
+
+    <div class="ajustarCaja1" *ngFor="let item of corriente.datos" >
+      <div class="CajaIcono">
+        <i class="material-icons icono">credit_card</i>
+          
+      </div>
+      <div class="CajaTexto1">
+          <ion-label class="txtIconTitulo">{{item.nombre}}</ion-label>
+          <ion-label class="txtIconTitulo2">{{item.estado}}</ion-label>
+          <ion-label class="txtIconTitulo-right2">{{item.cuenta}}</ion-label>
+          <ion-label class="txtIconTitulo-right">{{item.valor}}</ion-label>
+      </div>
+    </div>
+
+    <div class="CajaTexto">
+      <p class="txtTitulo">Cuenta ahorro</p>
+    </div>
+
+    <div class="ajustarCaja1" *ngFor="let item of ahorros.datos" >
+      <div class="CajaIcono">
+        <i class="material-icons icono">credit_card</i>
+          
+      </div>
+      <div class="CajaTexto1">
+          <ion-label class="txtIconTitulo">{{item.nombre}}</ion-label>
+          <ion-label class="txtIconTitulo2">valor cuenta: </ion-label>
+          <ion-label class="txtIconTitulo-right2">{{item.cuenta}}</ion-label>
+          <ion-label class="txtIconTitulo-right">{{item.valor}}</ion-label>
+      </div>
+    </div>
+
+</ion-content>
+<app-tabs></app-tabs>

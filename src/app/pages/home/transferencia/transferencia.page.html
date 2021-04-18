@@ -1,0 +1,11 @@
+<app-header></app-header> 
+<ion-content class="body">
+    <app-alerta *ngIf="AlertaPersonalizada " [Titulo]="Titulo" [Mensaje]="Mensaje" [BtnVisible]="BtnInvisible"
+    (Visible)="AlertaPersonalizada = $event">
+    </app-alerta>
+
+    <div class="CajaTexto">
+      <p class="txtTitulo">Transferencias con códigos QR</p>
+    </div>
+</ion-content>
+<app-tabs></app-tabs>

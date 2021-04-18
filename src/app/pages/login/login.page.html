@@ -1,0 +1,38 @@
+<ion-content class="body">
+  <app-alerta *ngIf="AlertaPersonalizada" [Titulo]="Titulo" [Mensaje]="Mensaje" [BtnVisible]="BtnInvisible" (Visible)="AlertaPersonalizada = $event">
+  </app-alerta>
+
+
+    <div class="contenido">
+
+      <div class="CajaImagen">
+        <img src="./assets/Imagenes/imgLogin.png" class="logoLogin">  
+      </div> 
+      
+      <div class="CajaTexto">
+        <p class="txtTitulo">Login</p>
+        <p class="txtTitulo">Bienvenido Mi Primer Banco</p>
+        
+      </div>
+      
+
+      <div class="CajaImputs">
+        <ion-item class="body">
+            <ion-label position="floating" class="colorLimen">Documento</ion-label>
+            <ion-input class="colorLimen" [(ngModel)]="user"></ion-input>
+        </ion-item>
+        <ion-item class="body">
+            <ion-label position="floating" class="colorLimen">Contraseña</ion-label>
+            <ion-input type="password" class="colorLimen" [(ngModel)]="password"></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="CajaBoton">
+        <ion-button (click)="login()" expand="full" color="primary">
+            Ingresar
+        </ion-button>
+      </div>
+      
+    </div>
+</ion-content>
+

@@ -1,0 +1,37 @@
+.Header {
+    width: 100%;
+    background: #007036;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.CajaHeader {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.txtTitulo {
+    font-family: "Segoe UI Bold";
+    font-size: 22px;
+    color: #EBEBEB;
+    text-align: center;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+ion-label {
+    margin: 0;
+    padding: 0;
+}
+
+ion-icon {
+    margin: 0;
+    padding: 0;
+    font-size: 35px;
+    color: #fff;
+}

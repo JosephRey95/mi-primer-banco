@@ -1,0 +1,50 @@
+<app-header></app-header> 
+<ion-content class="body">
+  <app-alerta *ngIf="AlertaPersonalizada " [Titulo]="Titulo" [Mensaje]="Mensaje" [BtnVisible]="BtnInvisible"
+  (Visible)="AlertaPersonalizada = $event">
+  </app-alerta>
+
+
+  <div class="CajaTexto">
+    <p class="txtTitulo">Inscripción a cuentas de tercero</p>
+  </div>
+
+  <div class="CajaImputs">
+    <ion-item class="body">
+        <ion-label position="floating" class="colorLimen">Alias de la cuenta</ion-label>
+        <ion-input class="colorLimen" [(ngModel)]="Alias"></ion-input>
+    </ion-item>
+    <ion-item class="body">
+        <ion-label position="floating" class="colorLimen">Entidad Bancaria</ion-label>
+        <ion-input type="text" class="colorLimen" [(ngModel)]="Entidad"></ion-input>
+    </ion-item>
+    <ion-item class="body">
+      <ion-label class="ColorNegro">Tipo cuenta</ion-label>
+      <ion-select color="primary" value="tipoCuenta" interface="action-sheet" name="tipoCuenta" [(ngModel)]="tipoCuenta">
+        <ion-select-option color="primary" class="ColorNegro" value="1">C. Ahorro</ion-select-option>
+        <ion-select-option color="primary" class="ColorNegro" value="2">C. Corriente</ion-select-option> 
+      </ion-select>
+    </ion-item>
+    <ion-item class="body">
+      <ion-label position="floating" class="colorLimen">Número de la cuenta</ion-label>
+      <ion-input type="text" type="number" maxlength="12"  class="colorLimen" [(ngModel)]="nCuenta"></ion-input>
+    </ion-item>
+    <ion-item class="body">
+        <ion-label position="floating" class="colorLimen">Identificación del titular de la cuenta</ion-label>
+        <ion-input type="text" type="number" maxlength="12"  class="colorLimen" [(ngModel)]="identificacion"></ion-input>
+    </ion-item>
+    <ion-item class="body">
+      <ion-label position="floating" class="colorLimen">Moneda</ion-label>
+      <ion-input type="text" class="colorLimen" [(ngModel)]="moneda"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="CajaBoton">
+    <ion-button (click)="guardar()" expand="full" color="primary">
+        Guardar
+    </ion-button>
+  </div>
+
+  
+</ion-content>
+<app-tabs></app-tabs>

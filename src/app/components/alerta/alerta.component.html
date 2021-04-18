@@ -1,0 +1,16 @@
+<div *ngIf="Ocultar" class="fondo">
+  <div class="AlertaVacia">
+      <ion-grid>
+          <ion-col>
+              <label for=""> {{ Titulo }}</label>
+          </ion-col>
+          <ion-col>
+              <p>{{ Mensaje }}</p>
+          </ion-col>
+          <ion-col size="12">
+
+              <button class="btnAlerta" (click)="alerta()" *ngIf="BtnVisible"> Ok </button>
+          </ion-col>
+      </ion-grid>
+  </div>
+</div>
